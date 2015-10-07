@@ -1,0 +1,38 @@
+\documentclass{scrbook}
+
+\usepackage{lipsum}
+
+\usepackage{titlesec}
+
+\usepackage{accanthis}
+\usepackage[T1]{fontenc}
+%http://www.tug.dk/FontCatalogue/allfonts.html
+\usepackage{lettrine}
+% lettrine formatting
+\setlength{\DefaultNindent}{0em}
+\setcounter{DefaultLines}{3}
+\input Romantik.fd
+\input Zallman.fd
+\newcommand*\initfamily{\usefont{U}{Romantik}{xl}{n}}
+\renewcommand{\LettrineFontHook}{\initfamily}
+
+\newcommand*\initfamilySection{\usefont{U}{Zallman}{xl}{n}}
+
+
+\titleformat{\chapter}[display]
+ {\initfamily}
+ {\thechapter}{20pt}{\Huge}
+\titleformat{\section}
+ {\initfamilySection}
+ {\thesection}{1em}{}
+
+\begin{document}
+\input{01_first_Group}
+\input{02_second_Group}
+\input{03_third_Group}
+\chapter{Adventure Notes}
+\lettrine{L}{orem} ipsum dolor sit amet, consectetuer adipiscing elit. \lipsum*[55]
+
+\lettrine{Q}{uisque} facilisis auctor
+sapien. \lipsum*[51]
+\end{document}
