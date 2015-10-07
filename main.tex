@@ -16,23 +16,17 @@
 \newcommand*\initfamily{\usefont{U}{Romantik}{xl}{n}}
 \renewcommand{\LettrineFontHook}{\initfamily}
 
-\newcommand*\initfamilySection{\usefont{U}{Zallman}{xl}{n}}
-
 
 \titleformat{\chapter}[display]
- {\initfamily}
+ {\usefont{U}{Zallman}{xl}{n}}
  {\thechapter}{20pt}{\Huge}
 \titleformat{\section}
- {\initfamilySection}
+ {\usefont{U}{Zallman}{xl}{n}}
  {\thesection}{1em}{}
 
 \begin{document}
 \input{01_first_Group}
 \input{02_second_Group}
 \input{03_third_Group}
-\chapter{Adventure Notes}
-\lettrine{L}{orem} ipsum dolor sit amet, consectetuer adipiscing elit. \lipsum*[55]
-
-\lettrine{Q}{uisque} facilisis auctor
-sapien. \lipsum*[51]
+\input{04_fourth_Group}
 \end{document}
